@@ -28,9 +28,9 @@ The configuration for the screensaver is stored in `config.json`. If this file i
 }
 ```
 
-- **blocks**: A table defining the available blocks to be displayed, along with their frequencies. The keys represent the frequency, and the values are the corresponding block characters.
+- **blocks**: A table defining the available blocks to be displayed and their frequencies. The keys represent the frequency, and the values are the corresponding block characters.
 
-- **size**: An object that specifies the size of the display area. It contains the `X` and `Y` dimensions, which represent the width and height of the screen, respectively.
+- **size**: An object that specifies the size of the display area. It contains the `X` and `Y` dimensions, representing the screen's width and height, respectively.
 
 - **renew**: The delay (in milliseconds) between each update of the screensaver. This value determines the animation speed.
 
@@ -45,13 +45,13 @@ Make sure you have Luvit installed on your system. Then, follow these steps:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Cowrod/lua-resp
+git clone https://github.com/Cowrod/screensaver
 ```
 
 2. Navigate to the repository directory:
 
 ```bash
-cd lua-resp/screensaver
+cd screensaver
 ```
 
 [human edit here] 3. Install [Luvit](https://luvit.io/install.html) If You Haven't Already
@@ -68,7 +68,7 @@ The screensaver will start executing and display the animated output in your ter
 
 The main script, `init.lua`, loads the configuration from `config.json` and initializes the necessary functions and variables. Here's a brief overview of the script's logic:
 
-1. **Configuration Setup**: The script reads the configuration from `config.json` and verifies its validity. If the configuration is missing or incomplete, a default space-themed configuration is used.
+1. **Configuration Setup**: The script reads the configuration from `config.json` and verifies its validity. A default space-themed configuration is used if the configuration is missing or incomplete.
 
 2. **Block and Screen Initialization**: The script creates a list of blocks based on the configuration's block frequencies. It also initializes the display area as an empty grid.
 
