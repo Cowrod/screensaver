@@ -1,0 +1,15 @@
+{
+	"blocks": {
+		"750": " ",
+		"20": "*",
+		"1": "O",
+		"2": "o"
+	},
+	"size": {
+		"X": 91,
+		"Y": 31
+	},
+	"renew": 50,
+	"horizantalChance": 100,
+	"useCLS": false
+}
