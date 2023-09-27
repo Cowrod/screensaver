@@ -1,4 +1,4 @@
-# screensaver [readme.md by ChatGPT](https://chat.openai.com/)
+# screensaver \[[readme.md by ChatGPT](https://chat.openai.com/)\]
 
 This repository contains a Lua script that serves as a simple terminal screensaver. The screensaver generates a dynamic display using a set of predefined blocks and animates them in a loop. The repository is licensed under the [WTFPL](http://www.wtfpl.net/) license, and the script assumes it is running on Luvit, so there is no need to download any additional libraries as they should be preinstalled with Luvit.
 
