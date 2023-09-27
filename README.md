@@ -1,4 +1,4 @@
-# screensaver [readme.md by ChatGPT]
+# screensaver [readme.md by ChatGPT](https://chat.openai.com/)
 
 This repository contains a Lua script that serves as a simple terminal screensaver. The screensaver generates a dynamic display using a set of predefined blocks and animates them in a loop. The repository is licensed under the [WTFPL](http://www.wtfpl.net/) license, and the script assumes it is running on Luvit, so there is no need to download any additional libraries as they should be preinstalled with Luvit.
 
@@ -15,8 +15,8 @@ The configuration for the screensaver is stored in `config.json`. If this file i
 	"blocks": {
 		"750": " ",
 		"20": "*",
-		"1": "O",
-		"2": "o"
+		"2": "o",
+		"1": "O"
 	},
 	"size": {
 		"X": 91,
@@ -24,7 +24,7 @@ The configuration for the screensaver is stored in `config.json`. If this file i
 	},
 	"renew": 50,
 	"horizantalChance": 100,
-	"useCLS": false
+	"useClear": false
 }
 ```
 
@@ -36,7 +36,7 @@ The configuration for the screensaver is stored in `config.json`. If this file i
 
 - **horizantalChance**: The probability (in percentage) of a horizontal update happening. This value controls the chance of a new line appearing at the top or bottom of the display.
 
-- **useCLS**: A boolean flag indicating whether to clear the screen before updating the display. Set this to `true` if you want a cleaner animation without leaving previous frames on the screen.
+- **useClear**: A boolean flag indicating whether to clear the screen before updating the display. Set this to `true` if you want a cleaner animation without leaving previous frames on the screen.
 
 ## Running the Screensaver
 
@@ -54,7 +54,7 @@ git clone https://github.com/Cowrod/screensaver
 cd screensaver
 ```
 
-[human edit here] 3. Install [Luvit](https://luvit.io/install.html) If You Haven't Already
+3. Install [Luvit](https://luvit.io/install.html) If You Haven't Already
 
 4. Run the screensaver:
 
@@ -73,8 +73,9 @@ The main script, `init.lua`, loads the configuration from `config.json` and init
 2. **Block and Screen Initialization**: The script creates a list of blocks based on the configuration's block frequencies. It also initializes the display area as an empty grid.
 
 3. **Main Functions**: Several functions are defined to support the animation process:
-   - `addToTable(table, object)`: A utility function to add an object to a table.
+   - `empty()`: An empty function.
    - `getRandomBlock()`: Returns a random block character from the list of available blocks.
+   - `preTable(tbl, value)`: A function to prepend a value to a table.
    - `getEntireRandomLine()`: Generates a random line of blocks for the display.
    - `horizontalUpdate()`: Moves lines of blocks up or down to create animation.
    - `updateView()`: Shifts the blocks in the display area to create animation.
