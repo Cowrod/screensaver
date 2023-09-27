@@ -11,5 +11,5 @@
 	},
 	"renew": 50,
 	"horizantalChance": 100,
-	"useCLS": false
+	"useClear": false
 }
