@@ -5,7 +5,7 @@ display_settings=display_settings and display_settings.blocks and #display_setti
 	size = { X = 91, Y = 31 },
 	renew = 50,
 	horizantalChance = 100,
-	useCLS = false
+	useClear = false
 }
 
 -------------- MAIN SCRIPT:
@@ -46,7 +46,7 @@ function getView()local m={}for i,v in pairs(display)do table.insert(m,table.con
 --[[(TASK 5/5) start the loop]]
 while true do
 	empty(math.random(display_settings.horizantalChance)==1 and horizontalUpdate())
-	empty(display_settings.useCLS and os.execute'cls')
+	empty(display_settings.useClear and io.write"\27\99")
 	updateView()
 	io.write("\n"..getView())
 	require'timer'.sleep(display_settings.renew)
