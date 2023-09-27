@@ -2,8 +2,8 @@
 	"blocks": {
 		"750": " ",
 		"20": "*",
-		"1": "O",
-		"2": "o"
+		"2": "o",
+		"1": "O"
 	},
 	"size": {
 		"X": 91,
@@ -11,5 +11,5 @@
 	},
 	"renew": 27,
 	"horizantalChance": 100,
-	"useClear": true
+	"useClear": false // <-- uses "\27\99" but still it just makes it laggier and uses more CPU [I will probably change it back to "cls"/"clear" commands later or something]
 }
