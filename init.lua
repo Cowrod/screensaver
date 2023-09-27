@@ -1,5 +1,5 @@
 local err, display_settings = pcall(require'json'.decode,require'fs'.readFileSync"config.json")
-display_settings=display_settings and display_settings.blocks and #display_settings.blocks>0 and display_settings.size and display_settings.X and display_settings.Y and display_settings.renew and display_settings.horizantalChance and type(display_settings.useCLS)=="boolean" and display_settings or{
+display_settings=display_settings and display_settings.blocks and #display_settings.blocks>0 and display_settings.size and display_settings.X and display_settings.Y and display_settings.renew and display_settings.horizantalChance and type(display_settings.useClear)=="boolean" and display_settings or{
 	-- EXAMPLE SPACE THEME AS DEFULT IF NO/UNVALID CONFIG
 	blocks = { [750] = " ", [20] = "*", [2]="o", [1] = "O" },
 	size = { X = 91, Y = 31 },
@@ -46,8 +46,7 @@ function getView()local m={}for i,v in pairs(display)do table.insert(m,table.con
 --[[(TASK 5/5) start the loop]]
 while true do
 	empty(math.random(display_settings.horizantalChance)==1 and horizontalUpdate())
-	empty(display_settings.useClear and io.write"\27\99")
 	updateView()
-	io.write("\n"..getView())
+	io.write((display_settings.useClear and"\27\99"or"\n")..getView())
 	require'timer'.sleep(display_settings.renew)
 end
